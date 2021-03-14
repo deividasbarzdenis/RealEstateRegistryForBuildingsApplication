@@ -37,6 +37,7 @@ public class PropertyDto {
     private Long area;
 
     private BigDecimal value;
+    private BigDecimal valueWithTax;
 
     private String type;
 }

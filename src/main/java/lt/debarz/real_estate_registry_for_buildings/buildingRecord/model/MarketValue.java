@@ -19,6 +19,7 @@ public class MarketValue {
     private Long id;
 
     private BigDecimal value;
+    private BigDecimal valueWithTax;
 
 
 }

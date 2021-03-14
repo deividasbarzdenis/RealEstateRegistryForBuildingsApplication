@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lt.debarz.real_estate_registry_for_buildings.buildingRecord.dto.OwnerDto;
 import lt.debarz.real_estate_registry_for_buildings.buildingRecord.dto.PropertyDto;
 import lt.debarz.real_estate_registry_for_buildings.buildingRecord.model.*;
+import lt.debarz.real_estate_registry_for_buildings.buildingRecord.util.RealEstateTax;
 import org.springframework.stereotype.Component;
 
 import java.util.stream.Collectors;
@@ -27,6 +28,7 @@ public class PropertyMapper {
                 .map(this::getOwnerDto).collect(Collectors.toSet()));
         propertyDto.setArea(property.getSize().getArea());
         propertyDto.setValue(property.getValue().getValue());
+        propertyDto.setValueWithTax(property.getValue().getValueWithTax());
         propertyDto.setType(property.getType().getType());
         return propertyDto;
     }
@@ -52,8 +54,10 @@ public class PropertyMapper {
     }
 
     private MarketValue addMarketValue(PropertyDto propertyDto) {
+        RealEstateTax tax = new RealEstateTax();
         MarketValue value = new MarketValue();
         value.setValue(propertyDto.getValue());
+        value.setValueWithTax(tax.calculateTaxFromValue(propertyDto.getValue()));
         return value;
     }
 
