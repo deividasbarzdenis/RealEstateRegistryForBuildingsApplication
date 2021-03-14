@@ -2,6 +2,7 @@ package lt.debarz.real_estate_registry_for_buildings.buildingRecord.model;
 
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -17,6 +18,7 @@ public class Property {
     private Long id;
 
     @Temporal(TemporalType.DATE)
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date year;
 
     private String description;

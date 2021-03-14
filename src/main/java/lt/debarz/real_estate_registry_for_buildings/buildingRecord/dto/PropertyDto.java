@@ -20,8 +20,8 @@ public class PropertyDto {
 
     private Long id;
 
-    @JsonFormat(pattern = "dd/MM/yyyy")
-    @DateTimeFormat(pattern = "dd/MM/yyyy")
+    @JsonFormat(pattern = "yyyy-MM-dd")
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date year;
 
     private String description;

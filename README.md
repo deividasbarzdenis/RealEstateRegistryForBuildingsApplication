@@ -33,7 +33,7 @@ Documentation API (Swagger) by accessing
 http://localhost:8080/swagger-ui.html
 ~~~~
 ##Front end code
-React Application - Import https://github.com/TomaEduard/hoaxify-frontend.
+React Application - Import https://github.com/deividasbarzdenis/real_estate_registry_for_buildings-react
 ##H2 Console
 http://localhost:8080/h2
 Use jdbc:h2:mem:building as JDBC URL
