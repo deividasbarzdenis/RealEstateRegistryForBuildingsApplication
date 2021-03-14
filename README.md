@@ -38,3 +38,9 @@ React Application - Import https://github.com/deividasbarzdenis/real_estate_regi
 http://localhost:8080/h2
 Use jdbc:h2:mem:building as JDBC URL
 ##Screenshots
+* Landing page:
+![img.png](img.png)
+* Add Property page:
+![img_1.png](img_1.png)
+*  All properties listed in the table:
+![img_2.png](img_2.png)
